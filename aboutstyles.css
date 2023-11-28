@@ -1,0 +1,157 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:'Rubik', sans-serif;
+    background-color: #20263e;
+    color: pink;
+  }
+  body{
+    padding:75px;
+    width:100%;
+    height:100vh;
+  }
+
+  #br{
+    display:none;
+  }
+  .nav{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display:flex;
+    justify-content: space-around;
+  }
+  .nav a{
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-decoration: none;
+    margin-right: 40px;
+    transition: .3s;
+  }
+  .nav a:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    
+
+  }
+  img{
+    height:500px;
+    width:auto;
+    padding:none;
+    margin:30px;
+    opacity:.5;
+    transition: .5s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+  }
+  img:hover{
+    opacity:.9;
+  }
+  
+
+  h1{
+    font-size: 4rem;
+    font-weight: 300;
+  }
+  h2{
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: 100px;
+   
+  }
+ 
+.text{
+    display:flex;
+    justify-content: center;
+
+}
+  p{
+    line-height: 1.75;
+    font-weight: 100;
+    font-size: 1.5rem;
+    max-width: 800px;
+  
+  }
+
+  .social{
+    display:flex;
+    justify-content: flex-end;
+    background:transparent;
+    margin-bottom: 20px;
+  
+  }
+
+
+
+
+  /*/////////MOBILE/////////////////*/
+
+
+
+  @media all and (max-width: 480px) { 
+
+    body{
+      padding:0px;
+      margin:10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    img{
+      position:static;
+      max-width: 400px;
+      height:auto;
+      margin:0;
+    }
+    .nav{
+      position:static;
+      display:flex;
+      flex-direction: column;
+      margin-top: 50px;
+      margin-bottom:50px;
+    }
+    .nav a{
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    
+    #br{
+      display:block;
+    }
+    .container{
+      display:flex;
+      flex-direction: column;
+      align-items: left;
+
+      margin-top:10px;
+    }
+  
+    .text{
+      margin-top: 20px;
+    }
+    h1{
+      font-size: 3rem;
+    }
+    h2{
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+   
+    
+    p{
+     font-size: 1.2rem;
+      width: 400px;
+      height:auto;
+    }
+  
+  }
