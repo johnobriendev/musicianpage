@@ -32,11 +32,13 @@ body{
 hr{
   background-color:pink;
   height:4px;
+  z-index: 1;
 }
 h1{
   font-weight: 300;
   font-size: 7rem;
   background:transparent;
+  z-index: 1;
 
 }
 h2{
@@ -44,6 +46,7 @@ h2{
   font-size: 3rem;
   z-index:1;
   background:transparent;
+  z-index: 1;
 }
 
 a{
@@ -53,12 +56,14 @@ a{
   font-size: 6rem;
   transition: .3s;
   background-color: transparent;
+  z-index: 1;
 }
 
 a:hover{
   transform: scale(1.025);
   cursor: pointer;
   background-color: transparent;
+  z-index: 1;
 }
 
 .social{
