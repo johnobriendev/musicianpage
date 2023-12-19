@@ -129,7 +129,7 @@ iframe{
 }
 
 /*/////////////////Tablets///////////////////*/
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 768px){
   body{
     align-items: center;
   }
