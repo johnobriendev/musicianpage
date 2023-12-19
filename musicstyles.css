@@ -106,7 +106,7 @@ iframe{
   display:flex;
   justify-content: space-around;
   align-items:center;
-   width: 100%;
+   width: 80%;
   margin-top: 40px;
    margin-bottom: 40px;
 }
