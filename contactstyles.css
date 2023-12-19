@@ -123,8 +123,30 @@
     font-weight:500;
   }
   
+/*/////////////////Tablets///////////////////*/
+  @media only screen and (min-width: 769px){
+    body{
+      align-items: center;
+    }
+    .header{
+      width:80%;
+    }
+    .container{
+      width: 80%;
+      align-items: center;
+    }
+    img{
+      width:800px;
+    }
+    p{
+      width:100%;
+      line-height: 2;
+      font-size: 1.5rem;
+    }
+    
 
-  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1025px) {
     /* For desktop: */
     
     body{
