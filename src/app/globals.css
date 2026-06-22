@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    background-color: #20263e;
+    color: pink;
+    font-weight: 100;
+  }
+
+  html,
+  body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+}
