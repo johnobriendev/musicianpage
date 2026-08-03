@@ -18,7 +18,7 @@ export default function Nav() {
   return (
     <nav className="relative flex items-start">
       <button
-        className="md:hidden bg-transparent border-0 cursor-pointer text-[pink] text-[1.6rem] p-1.5 leading-none"
+        className="relative z-201 md:hidden bg-transparent border-0 cursor-pointer text-[pink] text-[1.6rem] p-1.5 leading-none"
         onClick={() => setOpen(!open)}
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
@@ -40,17 +40,9 @@ export default function Nav() {
       >
         <Link href="/" className={linkCls}>Home</Link>
         <Link href="/about" className={linkCls}>About</Link>
-        <Link href="/lessons" className={linkCls}>Lessons</Link>
         <Link href="/music" className={linkCls}>Media</Link>
-        <Link href="/contact" className={linkCls}>Contact</Link>
+        <Link href="/links" className={linkCls}>Links</Link>
       </div>
-
-      {open && (
-        <div
-          className="fixed inset-0 z-[199] bg-transparent"
-          onClick={() => setOpen(false)}
-        />
-      )}
     </nav>
   )
 }

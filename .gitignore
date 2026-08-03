@@ -13,6 +13,7 @@ node_modules/
 npm-debug.log*
 
 # Local env files
+.env
 .env*.local
 
 # Vercel

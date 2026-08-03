@@ -14,9 +14,12 @@ export default function Home() {
 
       {/* Name + subtitle */}
       <div className="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between bg-transparent">
-        <h1 className="text-[3rem] sm:text-[4.5rem] lg:text-[7rem] font-light bg-transparent">
-          John O&apos;Brien
-        </h1>
+        <Link
+          href="/"
+          className="no-underline text-inherit text-[3rem] sm:text-[4.5rem] lg:text-[7rem] font-light bg-transparent"
+        >
+          <h1 className="inline">John O&apos;Brien</h1>
+        </Link>
         <h2 className="text-[1.4rem] sm:text-[2rem] lg:text-[3rem] font-light bg-transparent mt-1 sm:mt-0">
           Guitarist, Composer,<br className="sm:hidden" /> Educator
         </h2>
@@ -41,13 +44,6 @@ export default function Home() {
         </Link>
         <hr className="border-[pink] border-t-2 bg-[#20263e]" />
         <Link
-          href="/lessons"
-          className="block no-underline text-[pink] text-[2rem] sm:text-[3rem] lg:text-[6rem] font-light py-1 bg-transparent transition-transform duration-300 hover:scale-[1.02]"
-        >
-          Lessons
-        </Link>
-        <hr className="border-[pink] border-t-2 bg-[#20263e]" />
-        <Link
           href="/music"
           className="block no-underline text-[pink] text-[2rem] sm:text-[3rem] lg:text-[6rem] font-light py-1 bg-transparent transition-transform duration-300 hover:scale-[1.02]"
         >
@@ -55,10 +51,10 @@ export default function Home() {
         </Link>
         <hr className="border-[pink] border-t-2 bg-[#20263e]" />
         <Link
-          href="/contact"
+          href="/links"
           className="block no-underline text-[pink] text-[2rem] sm:text-[3rem] lg:text-[6rem] font-light py-1 bg-transparent transition-transform duration-300 hover:scale-[1.02]"
         >
-          Contact
+          Links
         </Link>
         <hr className="border-[pink] border-t-2 bg-[#20263e]" />
       </div>
