@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
-const title = "John O'Brien — Guitarist & Guitar Teacher"
+const title = "John O'Brien — Guitarist, Composer, Educator"
 const description = 'Personalized guitar lessons in Montevideo and online.'
 
 export const metadata: Metadata = {
