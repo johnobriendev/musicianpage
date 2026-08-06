@@ -30,7 +30,7 @@ type LinkItem = {
 }
 
 const links: LinkItem[] = [
-  { label: 'Book a Lesson', href: process.env.BOOK_A_LESSON_URL || '#', variant: 'primary' },
+  { label: 'Book a Free 30 Min Consultation', href: process.env.BOOK_A_LESSON_URL || '#', variant: 'primary' },
   { label: 'ChordBuilder', href: 'https://chordbuilder.netlify.app/' },
   { label: 'You Can Learn Guitar', href: 'https://youcanlearnguitar.com/' },
 ]
