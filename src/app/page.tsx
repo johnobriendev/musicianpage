@@ -18,7 +18,7 @@ export default function Home() {
           href="/"
           className="no-underline text-inherit text-[3rem] sm:text-[4.5rem] lg:text-[7rem] font-light bg-transparent"
         >
-          <h1 className="inline">John O&apos;Brien</h1>
+          <h1 className="inline bg-transparent">John O&apos;Brien</h1>
         </Link>
         <h2 className="text-[1.4rem] sm:text-[2rem] lg:text-[3rem] font-light bg-transparent mt-1 sm:mt-0">
           Guitarist, Composer,<br className="sm:hidden" /> Educator
