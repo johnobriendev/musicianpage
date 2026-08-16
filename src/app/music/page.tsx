@@ -7,6 +7,9 @@ export const metadata = { title: "Music | John O'Brien" }
 export default function Music() {
   return (
     <div className="min-h-screen flex flex-col p-4 sm:p-6 lg:p-10">
+      <link rel="preconnect" href="https://open.spotify.com" />
+      <link rel="preconnect" href="https://encore.scdn.co" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://i.scdn.co" />
       <header className="flex items-start justify-between mb-6">
         <div>
           <Link href="/" className="no-underline text-inherit">
@@ -44,26 +47,6 @@ export default function Music() {
           <iframe
             style={{ borderRadius: '12px' }}
             src="https://open.spotify.com/embed/album/4xpm9IcTxIa03Onxowpdvs?utm_source=generator"
-            width="100%"
-            height="352"
-            frameBorder="0"
-            allowFullScreen
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          />
-          <iframe
-            style={{ borderRadius: '12px' }}
-            src="https://open.spotify.com/embed/album/4GAbpLrbVFUC4KeTO0cp6l?utm_source=generator"
-            width="100%"
-            height="352"
-            frameBorder="0"
-            allowFullScreen
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          />
-          <iframe
-            style={{ borderRadius: '12px' }}
-            src="https://open.spotify.com/embed/album/6ElYdNLtPPoWD9mkQVBVsI?utm_source=generator"
             width="100%"
             height="352"
             frameBorder="0"
