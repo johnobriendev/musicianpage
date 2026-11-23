@@ -23,7 +23,7 @@ export default async function Links({ params }: Props) {
   const links = [
     { label: t.links.book, href: process.env.BOOK_A_LESSON_URL || '#', primary: true },
     { label: 'ChordBuilder', href: 'https://chordbuilder.netlify.app/' },
-    { label: 'You Can Learn Guitar', href: 'https://youcanlearnguitar.com/' },
+    { label: 'Learn the Notes', href: 'https://learnthenotes.vercel.app/' },
   ]
 
   return (
