@@ -1,17 +1,72 @@
 @import "tailwindcss";
 
+/* "Record Sleeve" palette */
+@theme {
+  --color-sleeve: #f1ebdd; /* background: warm sleeve paper */
+  --color-sleeve-dark: #e6dece; /* subtle panels on the paper */
+  --color-ink: #141414; /* text and heavy rules */
+  --color-cobalt: #2549c8; /* main accent */
+  --color-cobalt-deep: #1b379c; /* accent hover */
+  --color-signal: #e2572b; /* small decorative details only (too faint for text) */
+  --color-kraft: #6a6458; /* secondary text */
+}
+
+@theme inline {
+  --font-display: var(--font-archivo-narrow), "Arial Narrow", "Helvetica Neue", sans-serif;
+  --font-sans: var(--font-archivo), system-ui, -apple-system, sans-serif;
+}
+
 @layer base {
-  * {
-    box-sizing: border-box;
-    background-color: #20263e;
-    color: pink;
-    font-weight: 100;
+  html {
+    background-color: var(--color-sleeve);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
   }
 
-  html,
   body {
     min-height: 100vh;
-    padding: 0;
     margin: 0;
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: var(--color-cobalt);
+    color: var(--color-sleeve);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-cobalt);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  /* Black-and-white print, so photos from different shoots look like one set. */
+  .mono img {
+    filter: grayscale(1) contrast(1.05);
+  }
+
+  /* Small uppercase label used above lists and blocks */
+  .label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }

@@ -1,34 +1,30 @@
 import Link from 'next/link'
+import { social } from '@/content/music'
+import { localePath, type Lang } from '@/i18n/config'
 
-export default function Footer() {
+export default function Footer({ lang, privacyLabel }: { lang: Lang; privacyLabel: string }) {
   return (
-    <div className="flex flex-col items-center md:items-end gap-2 py-5 mt-auto bg-transparent">
-      <div className="flex justify-center md:justify-end items-center gap-1">
-        <a
-          href="https://www.instagram.com/johnobrienmusic/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fa-brands fa-instagram text-[28px] md:text-[32px] bg-transparent px-3 py-2 rounded-lg transition-transform hover:scale-110 cursor-pointer" />
-        </a>
-        <a
-          href="https://www.youtube.com/channel/UCCttnCgOwvd43Nqus_E3qmQ"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fa-brands fa-youtube text-[28px] md:text-[32px] bg-transparent px-3 py-2 rounded-lg transition-transform hover:scale-110 cursor-pointer" />
-        </a>
-        <a
-          href="https://open.spotify.com/artist/29YTYnDCg0GXNGv3pSgn7t"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fa-brands fa-spotify text-[28px] md:text-[32px] bg-transparent px-3 py-2 rounded-lg transition-transform hover:scale-110 cursor-pointer" />
-        </a>
+    <footer className="mt-16 flex flex-col gap-4 border-t-[3px] border-ink py-6 sm:flex-row sm:items-center sm:justify-between">
+      <ul className="flex flex-wrap gap-x-6 gap-y-2">
+        {social.map((s) => (
+          <li key={s.label}>
+            <a
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="label no-underline transition-colors hover:text-cobalt"
+            >
+              {s.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div className="flex flex-wrap items-center gap-x-6 gap-y-1 text-sm text-kraft">
+        <Link href={localePath(lang, '/privacy-policy')} className="underline-offset-4 hover:underline">
+          {privacyLabel}
+        </Link>
+        <span>© {new Date().getFullYear()} John O&apos;Brien</span>
       </div>
-      <Link href="/privacy-policy" className="text-xs opacity-60 no-underline hover:opacity-100">
-        Privacy Policy / Política de Privacidad
-      </Link>
-    </div>
+    </footer>
   )
 }

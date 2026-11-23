@@ -1,10 +1,6 @@
-'use client'
+import type { Lang } from '@/i18n/config'
 
-import { useState } from 'react'
-
-type Lang = 'es' | 'en'
-
-const content: Record<
+export const privacyContent: Record<
   Lang,
   {
     title: string
@@ -149,57 +145,4 @@ const content: Record<
       },
     ],
   },
-}
-
-export default function PrivacyContent() {
-  const [lang, setLang] = useState<Lang>('es')
-  const t = content[lang]
-
-  return (
-    <div className="w-full max-w-3xl mx-auto">
-      <div className="flex justify-center gap-3 mb-8">
-        <button
-          onClick={() => setLang('es')}
-          className={`text-sm px-3 py-1 rounded-full border border-[pink] transition-transform hover:scale-105 ${
-            lang === 'es' ? 'font-semibold' : 'opacity-60'
-          }`}
-        >
-          Español
-        </button>
-        <button
-          onClick={() => setLang('en')}
-          className={`text-sm px-3 py-1 rounded-full border border-[pink] transition-transform hover:scale-105 ${
-            lang === 'en' ? 'font-semibold' : 'opacity-60'
-          }`}
-        >
-          English
-        </button>
-      </div>
-
-      <h1 className="text-2xl lg:text-4xl font-light text-center mb-2">{t.title}</h1>
-      <p className="text-sm text-center opacity-70 mb-8">{t.updated}</p>
-
-      <p className="text-base leading-7 lg:text-lg lg:leading-8 mb-8">{t.intro}</p>
-
-      <div className="flex flex-col gap-6">
-        {t.sections.map((section, i) => (
-          <div key={i}>
-            {section.heading && (
-              <h2 className="text-lg lg:text-xl font-normal mb-2">{section.heading}</h2>
-            )}
-            {section.body && <p className="text-base leading-7 lg:text-lg lg:leading-8">{section.body}</p>}
-            {section.items && (
-              <ul className="list-disc pl-6 mt-2 flex flex-col gap-1">
-                {section.items.map((item) => (
-                  <li key={item} className="text-base leading-7 lg:text-lg lg:leading-8">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
 }
