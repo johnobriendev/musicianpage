@@ -5,7 +5,7 @@ import type { Dictionary } from './en'
 export const es: Dictionary = {
   meta: {
     name: "John O'Brien",
-    description: 'Guitarrista de jazz, compositor y docente.',
+    description: 'Guitarrista',
   },
   roles: ['Guitarrista', 'Compositor', 'Docente'],
   nav: {

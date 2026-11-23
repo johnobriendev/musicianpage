@@ -3,7 +3,7 @@
 export const en = {
   meta: {
     name: "John O'Brien",
-    description: 'Jazz guitarist, composer and educator.',
+    description: 'Guitarist',
   },
   roles: ['Guitarist', 'Composer', 'Educator'],
   nav: {
