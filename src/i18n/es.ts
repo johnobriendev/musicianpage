@@ -15,6 +15,7 @@ export const es: Dictionary = {
     videos: 'Videos',
     teaching: 'Docencia',
     contact: 'Contacto',
+    links: 'Enlaces',
     menu: 'Menú',
     close: 'Cerrar',
   },

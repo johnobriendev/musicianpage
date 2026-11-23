@@ -13,6 +13,7 @@ export const en = {
     videos: 'Videos',
     teaching: 'Teaching',
     contact: 'Contact',
+    links: 'Links',
     menu: 'Menu',
     close: 'Close',
   },

@@ -13,13 +13,14 @@ type Props = {
   langSwitch: Dictionary['langSwitch']
 }
 
-const pages = ['/about', '/music', '/videos', '/teaching', '/contact'] as const
+const pages = ['/about', '/music', '/videos', '/teaching', '/contact', '/links'] as const
 const navKey = {
   '/about': 'about',
   '/music': 'music',
   '/videos': 'videos',
   '/teaching': 'teaching',
   '/contact': 'contact',
+  '/links': 'links',
 } as const
 
 export default function SiteHeader({ lang, nav, langSwitch }: Props) {
